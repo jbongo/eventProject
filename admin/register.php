@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,73 +9,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>création de compte</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark">
+<body style="background-color: #f6f6f5">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Créer un compte</div>
+      <div class="card-header"> <h3>Créer votre compte</h3></div>
       <div class="card-body">
-        <form>
+        <form action="controller/candidat.php" method="post">
           <div class="form-group">
             <label for="civi">Civilité</label>
-            <select></select>
-            <input class="form-control" id="civi" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <select name="civilite">
+                <option value="Mr">Mr</option>
+                <option value="Mme">Mme</option>
+                <option value="Mlle">Mlle</option>
+            </select>
           </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <label for="exampleInputName">Prénom </label>
-                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+                <input class="form-control" name="prenom" id="exampleInputName" required="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
               </div>
               <div class="col-md-6">
                 <label for="exampleInputLastName">Nom</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+                <input class="form-control" name="nom" id="exampleInputLastName" required="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
               </div>
             </div>
           </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="exampleInputEmail1">Adresse email </label>
-                <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+                <label for="exampleInputAdresse">Adresse </label>
+                <input class="form-control" name="adresse" id="exampleInputAdresse" required="" type="text" aria-describedby="nameHelp" placeholder=" 5 avenue des gaulois">
               </div>
               <div class="col-md-6">
-                <label for="exampleInputLastName">Civilité</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+                <label for="exampleInputLastPostal">Code Postale</label>
+                <input class="form-control" name="codePostal" id="exampleInputLastPostal" required="" type="text" aria-describedby="nameHelp" placeholder="75000">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputVille">Ville </label>
+                <input class="form-control" name="Ville" id="exampleInputVille" required="" type="text" aria-describedby="nameHelp" placeholder="Paris">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastContact">Pays</label>
+                <input class="form-control" name="Contact" id="exampleInputLastContact" required="" type="text" aria-describedby="nameHelp" placeholder="France">
               </div>
             </div>
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Adresse email</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input class="form-control" name="email" id="exampleInputEmail1" required="" type="email" aria-describedby="emailHelp" placeholder="alex@site.com">
           </div>
           <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="exampleInputPassword1">Password</label>
-                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
-              </div>
-              <div class="col-md-6">
-                <label for="exampleConfirmPassword">Confirm password</label>
-                <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
-              </div>
-            </div>
+            <label for="exampleInputQuestion1">Pourquoi voulez vous participer au salon ?</label>
+            <input class="form-control" name="question1" id="exampleInputQuestion1" required="" type="text" aria-describedby="emailHelp" placeholder=" ">
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Register</a>
+          <div class="form-group">
+            <label for="exampleInputQuestion2">Avez vous déjà participé à l'un de nos salons ?</label>
+            <input class="form-control" name="question2" id="exampleInputQuestion2" required="" type="text" aria-describedby="emailHelp" placeholder=" ">
+          </div>
+          
+
+           <input name="ajout" type="hidden" >
+          <button class="btn btn-primary btn-block">Je m'inscris</button>
+
         </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Login Page</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-        </div>
       </div>
     </div>
   </div>
